@@ -227,6 +227,7 @@ declare module 'vue' {
     MeterGroupLabel: typeof import('./node_modules/primevue/metergroup/MeterGroupLabel.vue')['default']
     Minus: typeof import('./node_modules/primevue/icons/minus/index.vue')['default']
     MultiSelect: typeof import('./node_modules/primevue/multiselect/MultiSelect.vue')['default']
+    NewsBoard: typeof import('./src/components/News-Board.vue')['default']
     NewsDetail: typeof import('./src/views/NewsDetail.vue')['default']
     NewsView: typeof import('./src/views/NewsView.vue')['default']
     NextPageLink: typeof import('./node_modules/primevue/paginator/NextPageLink.vue')['default']
