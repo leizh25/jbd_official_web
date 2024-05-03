@@ -1,5 +1,6 @@
 import 'reset-css';
 import 'nprogress/nprogress.css';
+import './style/base.scss';
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
 import App from './App.vue';
