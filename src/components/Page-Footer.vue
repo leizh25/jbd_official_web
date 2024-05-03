@@ -92,20 +92,21 @@
   </div>
 </template>
 <script lang="ts" setup></script>
-<style lang="scss">
+<style lang="scss" scoped>
 #footer {
   position: relative;
   width: 100%;
-  height: 352px;
-  padding-top: 78px;
+  height: 430px;
   color: #fff;
   line-height: 24px;
   background-color: #050f19;
 }
 
 .footer-inner {
-  width: 1336px;
-  margin: 0 auto;
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  translate: -50%;
 }
 
 a {
@@ -117,8 +118,14 @@ a {
   color: #748ea6;
 }
 
+.footer-list {
+  // position: relative;
+  width: 1340px;
+}
+
 .footer_main--column {
   float: left;
+
   margin-right: 68px;
   text-align: center;
 }
@@ -137,8 +144,9 @@ a {
 }
 
 .footer-contact {
-  display: inline-block;
-  margin-left: 140px;
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 14px;
   font-weight: 350;
   line-height: 16px;

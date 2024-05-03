@@ -1,113 +1,161 @@
 <template>
-  <Layout>
-    <div class="layout-container" style="width: 100%">
-      <div class="page-header">
-        <div class="am-container">
-          <h1 class="page-header-title">公司动态</h1>
-        </div>
-      </div>
-
-      <div class="breadcrumb-box">
-        <div class="am-container">
-          <ol class="am-breadcrumb">
-            <li><router-link to="/">首页</router-link></li>
-            <li class="am-active">新闻中心</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="container" style="max-width: 1160px">
-        <div class="section--header">
-          <h2 class="section--title">最近新闻</h2>
-          <p class="section--description">
-            云适配与中建材信息技术股份有限公司（以下简称“中建信息”）联合举办的“战略
-            <br />合作签约仪式暨全国跨屏行动启动大会”在北京成功举办。
-          </p>
-        </div>
-
-        <div class="news-contaier">
-          <div class="blog">
-            <div class="am-g">
-              <div class="am-u-lg-4 am-u-md-6 am-u-end" v-for="(article, index) in articles.records" :key="index">
-                <div class="article">
-                  <div class="article-img">
-                    <img :src="article.cover" alt="" />
-                  </div>
-                  <div class="article-header">
-                    <h2>
-                      <router-link :to="{ name: 'newsDetails', params: { newsId: article.articleId } }" rel="">{{ article.title }}</router-link>
-                    </h2>
-                    <ul class="article--meta">
-                      <li class="article--meta_item -date">{{ article.createTime }}</li>
-                    </ul>
-                  </div>
-                  <div class="article--content">
-                    <p>{{ article.introduction }}</p>
-                  </div>
-                  <div class="article--footer">
-                    <router-link :to="{ name: 'newsDetails', params: { newsId: article.articleId } }" class="link">查看更多</router-link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <ul class="am-pagination" style="text-align: center">
-              <li :class="pageIndex === 1 ? 'am-disabled' : ''" @click="changeIndex(pageIndex - 1)">
-                <a href="#">&laquo;</a>
-              </li>
-
-              <li v-for="(p, index) in articles.pages" :key="index" @click="changeIndex(p)" :class="pageIndex === p ? 'am-active' : ''">
-                <a href="#">{{ p }}</a>
-              </li>
-
-              <li :class="pageIndex === articles.pages ? 'am-disabled' : ''" @click="changeIndex(pageIndex + 1)">
-                <a href="#">&raquo;</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div class="news-view">
+    <div class="news-header"></div>
+    <div class="news-nav"></div>
+    <div class="news-content">
+      <ul class="news-list">
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span>8 月 29 日，新乡天力锂能股份有限公司（以下简称 " 天力锂能 "）在创业板上市，保荐人为民生证券，本次发行价格为 57.00 元 / 股，发行市盈率 81.94 倍，截止发稿......</span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <a href="#">中元股份易主 借力驶入锂电池“赛道”</a>
+          <span></span>
+          <i class="news-time">2018-08-29</i>
+        </li>
+      </ul>
+      <div class="news-page">
+        <a href="#">返回列表 ></a>
       </div>
     </div>
-  </Layout>
+  </div>
 </template>
+<script setup lang="ts"></script>
+<style>
+.news-view {
+  position: relative;
+}
 
-<script>
-import Layout from '@/components/common/Layout';
-export default {
-  name: 'NewsView',
-  components: { Layout },
-  data() {
-    return {
-      articles: {},
-      pageIndex: 1
-    };
-  },
-  mounted() {
-    this.getArticle(1);
-  },
-  methods: {
-    getArticle(pageIndex) {
-      this.getRequest(`/findArticles/${pageIndex}`).then((resp) => {
-        if (resp) {
-          this.articles = resp.data.data;
-          console.log(this.articles);
-        }
-      });
-    },
-    changeIndex(p) {
-      if (p === 0) {
-        this.pageIndex = 1;
-      } else if (p === this.articles.pages + 1) {
-        this.pageIndex = this.articles.pages;
-      } else {
-        this.pageIndex = p;
-        this.getArticle(p);
-      }
-    }
-  }
-};
-</script>
+.news-header {
+  height: 370px;
+  background-color: #941c1c;
+}
 
-<style scoped></style>
+.news-nav {
+  height: 68px;
+  background: #f5f8fa;
+  margin-bottom: 40.33px;
+}
+
+.news-list {
+  width: 1340px;
+  margin: 0 auto;
+}
+
+.news-list li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.news-list li:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.news-list li a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+}
+
+.news-list li img {
+  width: 430px;
+  height: 260px;
+  margin-bottom: 24px;
+  background: #bef;
+  border-radius: 6px;
+}
+
+.news-list li span {
+  display: block;
+  width: 410px;
+  height: 84px;
+  margin: 0 auto;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 28px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-list li i {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 350;
+  line-height: 18px;
+  margin-top: 8.7px;
+  margin-bottom: 46px;
+  color: #888888;
+}
+
+.news-page {
+  width: 160px;
+  height: 46px;
+  border: 1.33px solid #ebebeb;
+  text-align: center;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-bottom: 46px;
+}
+
+.news-page a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 46px;
+  margin-top: 52px;
+  color: #888;
+}
+</style>
