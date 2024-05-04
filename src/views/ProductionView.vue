@@ -2,7 +2,7 @@
   <main class="container">
     <section class="nav">
       <div class="desc">
-        <div style="margin: 0 auto">
+        <div>
           <div class="desc1">
             <span>产品中心</span>
           </div>
@@ -33,14 +33,14 @@
       <div class="main">
         <nav class="sidebar">
           <ul>
-            <span>
+            <span tabindex="1">
               智能锂电池保护板
               <i>标</i>
             </span>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-            <li><a href="#">带通讯5串以下保护板</a></li>
+            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
+            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
+            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
+            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
           </ul>
           <ul>
             <span>
@@ -76,45 +76,51 @@
         <section class="right">
           <ul>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/product_center.jpg" alt="这是一张图片" width="232px" height="200px" /></div>
+              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
           </ul>
         </section>
       </div>
+      <div class="loading-page">
+        <span>
+          <a href="#">加载更多 <i>></i></a></span
+        >
+      </div>
     </section>
+    <router-link to="/production/detail">产品详情</router-link>
   </main>
 </template>
 
@@ -212,14 +218,22 @@ input {
   height: 370px;
   opacity: 0.2;
   background-color: aqua;
+
+  text-align: center;
+}
+
+.desc > div:nth-child(1) {
+  width: 1340px;
+  height: 100%;
+  line-height: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .desc .desc1 {
+  float: left;
   /* 产品中心 */
-  position: absolute;
-  left: 45%;
-  top: 177px;
-  width: 240px;
+  width: 100%;
   height: 66px;
   opacity: 1;
   font-family: Source Han Sans;
@@ -230,14 +244,14 @@ input {
   font-variation-settings: 'opsz' auto;
   font-feature-settings: 'kern' on;
   color: #ffffff;
+
+  margin-top: 80px;
 }
 
 .desc .desc2 {
+  float: left;
   /* 专注于锂电池保护解决方案 */
-  position: absolute;
-  left: 45%;
-  top: 270px;
-  width: 384px;
+  width: 100%;
   height: 66px;
   opacity: 1;
   font-family: Source Han Sans;
@@ -248,6 +262,7 @@ input {
   font-variation-settings: 'opsz' auto;
   font-feature-settings: 'kern' on;
   color: #ffffff;
+  margin-top: 27px;
 }
 
 .localtion {
@@ -260,8 +275,8 @@ input {
 }
 
 .localtion > div {
-  position: absolute;
-  left: 320px;
+  width: 1340px;
+  margin: 0 auto;
 }
 
 .localtion > div > i {
@@ -287,21 +302,19 @@ input {
 }
 
 .content {
-  width: 1920px;
-  background-color: skyblue;
+  width: 1340px;
   margin: 0 auto;
 }
 
 .content > .top {
-  width: 1920px;
   height: 105px;
+  margin: 0 auto;
 }
 
 .content > .top > .top1 {
   /* 产品中心 */
   /* 组 133 */
   float: left;
-  left: 320px;
   margin-top: 50px;
   width: 120px;
   height: 47px;
@@ -310,8 +323,6 @@ input {
 }
 
 .content > .top > .top1 > span {
-  left: 0px;
-  top: 0px;
   width: 120px;
   height: 34px;
   opacity: 1;
@@ -339,7 +350,7 @@ input {
   float: right;
   width: 180px;
   height: 29px;
-  margin: 59px 295px 0px 0px;
+  margin-top: 59px;
   opacity: 1;
   font-family: 思源黑体;
   font-size: 20px;
@@ -354,11 +365,13 @@ input {
 
 .content > .main {
   display: flex;
-  height: 200px;
-  margin-top: 50px;
+  text-align: center;
+
+  margin: 0 auto;
 }
 
 .content > .main > .sidebar {
+  margin-top: 50px;
   width: 300px;
 }
 
@@ -372,14 +385,23 @@ input {
 
 .content > .main > .sidebar > ul > span {
   display: block;
+  width: 300px;
+  height: 50px;
   font-family: Source Han Sans;
   font-size: 16px;
   font-weight: bold;
   line-height: 50px;
   letter-spacing: 0px;
   font-variation-settings: 'opsz' auto;
+  color: #333333;
+  background: #eeeeee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.content > .main > .sidebar > ul > span:focus {
+  background: #99cc00;
   color: #ffffff;
-  background-color: #333;
 }
 
 .content > .main > .sidebar > ul > span > i {
@@ -395,40 +417,39 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 23px;
-  width: 154px;
+  height: 44px;
+  width: 300px;
   opacity: 1;
   font-family: Source Han Sans;
   font-size: 16px;
   font-weight: 500;
-  line-height: 23px;
+  line-height: 44px;
   letter-spacing: 0px;
   font-variation-settings: 'opsz' auto;
-  color: #ffffff !important;
-  margin-top: 20px;
-  margin-left: 28%;
+  color: #333333;
   text-align: center;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
-.content > .main > .sidebar > ul > li:first-child {
-  margin-top: 0px !important;
+.content > .main > .sidebar > ul > li:nth-child(2) {
+  margin-top: 9px;
 }
 
 .content > .main > .sidebar > ul > li:last-child {
-  margin-bottom: 20px !important;
+  margin-bottom: 9px;
 }
 
-.content > .main > .sidebar > ul > li > a {
-  color: #333333;
+.content > .main > .sidebar > ul > li:focus {
+  background: #99cc00;
+  color: #ffffff !important;
 }
 
 .content > .main > .right {
   display: flex;
-  width: 1060px !important;
-  height: 300px;
-  background-color: aqua;
-  margin-left: 20px;
-  margin-right: 295px;
+  width: 1000px;
+  margin-left: 32px;
+  margin-top: 50px;
 }
 
 .content > .main > .right > ul {
@@ -445,7 +466,17 @@ input {
   opacity: 1;
   box-sizing: border-box;
   border: 1px solid #d6d6d6;
-  background-color: antiquewhite;
+  background-color: #ffffff;
+
+  margin-bottom: 20px;
+}
+
+.content > .main > .right > ul > li:hover {
+  border: 4px solid #99cc00;
+}
+
+.content > .main > .right > ul > li:not(:nth-child(3n + 1)) {
+  margin-left: 20px;
 }
 
 .content > .main > .right > ul > li > div > img {
@@ -468,5 +499,39 @@ input {
   font-variation-settings: 'opsz' auto;
   font-feature-settings: 'kern' on;
   color: #3d3d3d;
+}
+
+.loading-page {
+  width: 1340px;
+  text-align: center;
+  margin-bottom: 46px;
+  margin-top: 41px;
+  padding-left: 176px;
+}
+
+.loading-page > span {
+  display: block;
+  width: 160px;
+  height: 46px;
+  line-height: 46px;
+  border: 1.33px solid #ebebeb;
+  text-align: center;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.loading-page a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 52px;
+  color: #888;
+}
+
+.loading-page > a > i {
+  margin-left: 4px;
+  width: 6.86px;
+  height: 12px;
+  opacity: 1;
 }
 </style>
