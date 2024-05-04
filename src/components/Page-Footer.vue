@@ -120,7 +120,7 @@ a {
 
 .footer-list {
   // position: relative;
-  width: 1340px;
+  width: 1330px;
 }
 
 .footer_main--column {
