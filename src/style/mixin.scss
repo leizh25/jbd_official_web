@@ -1,0 +1,10 @@
+@mixin wh($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+}
+@mixin w($width: auto) {
+  width: $width;
+}
+@mixin h($height: auto) {
+  height: $height;
+}

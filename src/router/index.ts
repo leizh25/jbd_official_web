@@ -1,5 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import AboutView from '../views/AboutView.vue';
+import InnovationView from '../views/InnovationView.vue';
+import ProductionView from '../views/ProductionView.vue';
+import ServiceView from '../views/ServiceView.vue';
+import NewsView from '../views/NewsView.vue';
+import ContactView from '../views/ContactView.vue';
 //@ts-ignore
 import NProgress from 'nprogress';
 const router = createRouter({
@@ -13,17 +19,17 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
+      component: AboutView
     },
     {
       path: '/innovation',
       name: 'innovation',
-      component: () => import('../views/InnovationView.vue')
+      component: InnovationView
     },
     {
       path: '/production',
       name: 'production',
-      component: () => import('../views/ProductionView.vue')
+      component: ProductionView
     },
     {
       path: '/production/detail',
@@ -33,12 +39,12 @@ const router = createRouter({
     {
       path: '/service',
       name: 'service',
-      component: () => import('../views/ServiceView.vue')
+      component: ServiceView
     },
     {
       path: '/news',
       name: 'news',
-      component: () => import('../views/NewsView.vue')
+      component: NewsView
     },
     {
       path: '/news/detail',
@@ -48,7 +54,7 @@ const router = createRouter({
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('../views/ContactView.vue')
+      component: ContactView
     }
   ]
 });
