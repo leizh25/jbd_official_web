@@ -97,23 +97,97 @@
         <div class="value"></div>
       </div>
       <hr />
-      <div class="my-want-consult">
-        <div class="title">
-          <span>我要咨询</span>
+      <div class="message_container">
+        <div class="w">
+          <div class="title">在线留言</div>
+          <div class="form_wrapper">
+            <form @submit.prevent="submitForm">
+              <div class="form_grid">
+                <div class="form_item">
+                  <div class="tip">
+                    <label>联系人</label>
+                  </div>
+                  <input type="text" placeholder="姓名" autocomplete="false" />
+                </div>
+                <div class="form_item">
+                  <div class="tip">
+                    <label>公司名称</label>
+                  </div>
+                  <input type="text" placeholder="请输入公司名称" autocomplete="false" />
+                </div>
+                <div class="form_item">
+                  <div class="tip">
+                    <label>Email</label>
+                  </div>
+                  <input type="text" placeholder="请输入Email地址" autocomplete="false" />
+                </div>
+                <div class="form_item captcha">
+                  <div class="tip">
+                    <label>手机号</label>
+                  </div>
+                  <div class="input_wrapper">
+                    <input type="text" placeholder="请输入手机号" required autocomplete="false" />
+                  </div>
+                </div>
+
+                <div class="text_form_item" style="margin-top: 20px">
+                  <div class="tip">
+                    <label>需求</label>
+                  </div>
+                  <textarea type="textarea" required placeholder="请输入留言内容" rows="7" autocomplete="false" style="width: 820px"></textarea>
+                </div>
+              </div>
+
+              <div class="btn_wrapper">
+                <button type="submit" @click="submitForm">提交</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+
       <hr style="margin-top: 60px" />
 
       <div class="product-relation">
         <div class="title">
           <span>相关产品</span>
         </div>
+        <div>
+          <ul>
+            <li>
+              <div>
+                <img src="./images/relation.png" alt="产品图片" />
+              </div>
+              <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
+            </li>
+            <li>
+              <div>
+                <img src="./images/relation.png" alt="产品图片" style="height: 232px" />
+              </div>
+              <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
+            </li>
+            <li>
+              <div>
+                <img src="./images/relation.png" alt="产品图片" style="height: 232px" />
+              </div>
+              <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
+            </li>
+            <li>
+              <div>
+                <img src="./images/relation.png" alt="产品图片" style="height: 232px" />
+              </div>
+              <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 </template>
+<script></script>
+<style scoped lang="scss">
+@import '../style/mixin.scss';
 
-<style scoped>
 body,
 ol,
 ul,
@@ -550,10 +624,228 @@ input {
   margin: 0 auto;
 }
 
+.content > .message_container {
+  // height: 750px;
+  @include h(750px);
+  display: flex;
+  justify-content: center;
+
+  .w {
+    width: 820px;
+
+    .title {
+      height: 113px;
+      line-height: 113px;
+      font-family: 'Source Han Sans';
+      font-size: 28px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .form_wrapper {
+      width: 100%;
+
+      input,
+      textarea,
+      button {
+        border: none;
+        outline: none;
+        background-color: #f1f1f1;
+      }
+
+      @mixin required {
+        position: relative;
+
+        &::before {
+          content: ' *';
+          color: #f00;
+          position: absolute;
+          right: -10px;
+        }
+      }
+
+      .text_form_item {
+        display: flex;
+        flex-direction: column;
+
+        .tip {
+          height: 28px;
+          line-height: 28px;
+          font-family: 'Source Han Sans';
+          font-size: 14px;
+          font-weight: 350;
+          color: #333;
+
+          label {
+            @include required();
+          }
+        }
+
+        textarea {
+          border-radius: 4px;
+          font-family: 'Source Han Sans';
+          font-size: 14px;
+          font-weight: 350;
+          line-height: 28px;
+          padding: 10px;
+          box-sizing: border-box;
+          resize: none;
+
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+      }
+
+      .form_grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .form_item {
+          width: 366px;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+
+          &:nth-child(4) {
+            .tip label {
+              @include required();
+            }
+          }
+
+          &.captcha {
+            .input_wrapper {
+              display: flex;
+              gap: 8px;
+
+              input {
+                width: 100%;
+                border-radius: 4px;
+              }
+            }
+          }
+
+          .tip {
+            font-family: 'Source Han Sans';
+            font-size: 14px;
+            font-weight: 350;
+            color: #333;
+            line-height: 28px;
+          }
+
+          input {
+            height: 46px;
+            border-radius: 4px;
+            background: #f1f1f1;
+            padding-left: 11px;
+            font-family: 'Source Han Sans';
+            font-size: 14px;
+            font-weight: 350;
+            line-height: 28px;
+          }
+        }
+      }
+
+      .btn_wrapper {
+        margin-top: 40px;
+        text-align: center;
+
+        button {
+          width: 260px;
+          height: 50px;
+          line-height: 50px;
+          background-color: #9c0;
+          border-radius: 6px;
+          font-family: Source Han Sans;
+          font-size: 20px;
+          font-weight: normal;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 .content > .product-relation {
-  width: 1330px;
+  width: 1340px;
   height: 392px;
-  background-color: #99cc00;
   margin-top: 63px;
+  margin-bottom: 67px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title > span {
+  width: 112px;
+  height: 28px;
+  opacity: 1;
+
+  font-family: Source Han Sans;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0px;
+
+  font-variation-settings: 'opsz' auto;
+  font-feature-settings: 'kern' on;
+  color: #3d3d3d;
+}
+
+.product-relation > div:nth-child(2) {
+  width: 100%;
+  height: 320px;
+  margin-top: 44px;
+}
+
+.product-relation > div:nth-child(2) > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.product-relation > div:nth-child(2) > ul > li {
+  width: 318px;
+  height: 320px;
+  border-radius: 6px;
+  opacity: 1;
+
+  background: #fafafa;
+
+  box-sizing: border-box;
+  border: 1px solid #d6d6d6;
+}
+.product-relation > div:nth-child(2) > ul > li > div {
+  width: 316px;
+  height: 232px;
+}
+.product-relation > div:nth-child(2) > ul > li:not(:nth-child(1)) {
+  margin-left: 20px;
+}
+
+.product-relation > div:nth-child(2) > ul > li > span {
+  float: left;
+  width: 190px;
+  height: 36px;
+  opacity: 1;
+
+  font-family: Source Han Sans;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0px;
+
+  font-variation-settings: 'opsz' auto;
+  font-feature-settings: 'kern' on;
+  color: #3d3d3d;
+  margin-top: 19.94px;
+  margin-left: 65px;
 }
 </style>
