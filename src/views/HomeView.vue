@@ -24,13 +24,13 @@ const newsList = reactive([
 <template>
   <main>
     <!-- #region 大视频 -->
-    <div class="banner">
+    <div class="banner" v-slide-in>
       <span>专注于锂电池保护解决方案</span>
       <video src=""></video>
     </div>
     <!-- #endregion -->
     <!-- #region 产品应用广泛 -->
-    <div class="product_cate_container">
+    <div class="product_cate_container" v-slide-in>
       <div class="w">
         <div class="title_box">
           <div class="t1">产品应用广泛</div>
@@ -51,7 +51,7 @@ const newsList = reactive([
     </div>
     <!-- #endregion -->
     <!-- #region 关于我们 -->
-    <div class="about_container">
+    <div class="about_container" v-slide-in>
       <div class="w">
         <div class="top">
           <div class="left">
@@ -115,7 +115,7 @@ const newsList = reactive([
     </div>
     <!-- #endregion 关于我们 -->
     <!-- #region 新闻资讯 -->
-    <div class="news_container">
+    <div class="news_container" v-slide-in>
       <div class="w">
         <div class="title_box2">
           <span class="title">新闻资讯</span>
@@ -347,8 +347,8 @@ const newsList = reactive([
         background-size: 100%;
         background-repeat: no-repeat;
         border-radius: 150px 0 150px 0;
-        // position: absolute;
-        position: relative;
+        position: absolute;
+        // position: relative;
         z-index: 999;
         // background-color: #bfa;
         &::before {
