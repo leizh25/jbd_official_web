@@ -3,9 +3,9 @@ import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
 import InnovationView from '../views/InnovationView.vue';
 import ProductionView from '../views/ProductionView.vue';
-import ServiceView from '../views/ProductionView.vue';
-import NewsView from '../views/ProductionView.vue';
-import ContactView from '../views/ProductionView.vue';
+import ServiceView from '../views/ServiceView.vue';
+import NewsView from '../views/NewsView.vue';
+import ContactView from '../views/ContactView.vue';
 //@ts-ignore
 import NProgress from 'nprogress';
 const router = createRouter({
