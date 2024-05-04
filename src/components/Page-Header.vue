@@ -60,6 +60,7 @@
     </ul>
   </div>
 </template>
+<script lang="ts" setup></script>
 <script lang="ts" setup>
 const colorFArr = ['/', '/production/detail', '/news/detail'];
 </script>
