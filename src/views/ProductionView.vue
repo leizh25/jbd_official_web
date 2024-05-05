@@ -1,4 +1,6 @@
 <template>
+  <link href="https://unpkg.com/vue-ionicons@4.4.0/dist/ionicons.min.css" rel="stylesheet" />
+
   <main class="container">
     <section class="nav">
       <div class="desc">
@@ -13,7 +15,7 @@
       </div>
       <div class="localtion">
         <div>
-          <i>标</i>
+          <i> <img src="/src/assets/img/localtion.png" alt="" /></i>
           <span>首页 - 产品中心 -详情</span>
         </div>
       </div>
@@ -35,7 +37,7 @@
           <ul>
             <span tabindex="1">
               智能锂电池保护板
-              <i>标</i>
+              <i> <img src="/src/assets/img/up.png" alt="" /> </i>
             </span>
             <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
             <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
@@ -45,7 +47,7 @@
           <ul>
             <span>
               智能锂电池保护板
-              <i>标</i>
+              <i><img src="/src/assets/img/up.png" alt="" /></i>
             </span>
             <li><a href="#">带通讯5串以下保护板</a></li>
             <li><a href="#">带通讯5串以下保护板</a></li>
@@ -54,7 +56,7 @@
           <ul>
             <span>
               智能锂电池保护板
-              <i>标</i>
+              <i><img src="/src/assets/img/up.png" alt="" /></i>
             </span>
             <li><a href="#">带通讯5串以下保护板</a></li>
             <li><a href="#">带通讯5串以下保护板</a></li>
@@ -62,53 +64,53 @@
           <ul>
             <span>
               智能锂电池保护板
-              <i>标</i>
+              <i><img src="/src/assets/img/up.png" alt="" /></i>
             </span>
             <li><a href="#">带通讯5串以下保护板</a></li>
           </ul>
           <ul>
             <span>
               智能锂电池保护板
-              <i>标</i>
+              <i><img src="/src/assets/img/up.png" alt="" /></i>
             </span>
           </ul>
         </nav>
         <section class="right">
           <ul>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
-              <div><img src="./images/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
+              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
           </ul>
@@ -212,14 +214,14 @@ input {
 }
 
 .desc {
-  left: 0px;
-  top: 0px;
-  width: 100%;
+  display: flex;
   height: 370px;
-  opacity: 0.2;
-  background-color: aqua;
-
+  width: 100%;
+  background: url(/src/assets/img/product-center.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
+  margin: 0 auto;
 }
 
 .desc > div:nth-child(1) {
@@ -276,17 +278,27 @@ input {
 
 .localtion > div {
   width: 1340px;
+  height: 68px;
   margin: 0 auto;
 }
 
 .localtion > div > i {
+  float: left;
+  display: inline-block;
   width: 22px;
+  opacity: 1;
+  height: 68px;
+  line-height: 76px;
+}
+.localtion > div > i > img {
+  width: 18.33px;
   height: 22px;
+  z-index: 999;
   opacity: 1;
 }
 
 .localtion > div > span {
-  margin-left: 10.83px;
+  margin-left: 9px;
   width: 150px;
   height: 22px;
   width: 150px;
@@ -299,6 +311,7 @@ input {
   letter-spacing: 0px;
   font-variation-settings: 'opsz' auto;
   color: #555555;
+  margin-left: 9px;
 }
 
 .content {
@@ -408,7 +421,6 @@ input {
   float: right;
   left: 7.55px;
   top: 1px;
-  height: 87.5%;
   margin-right: 43px;
   opacity: 1;
 }
@@ -442,7 +454,14 @@ input {
 
 .content > .main > .sidebar > ul > li:focus {
   background: #99cc00;
-  color: #ffffff !important;
+  color: #ffffff;
+}
+
+.content > .main > .sidebar > ul > li:focus a {
+  color: #ffffff;
+}
+.content > .main > .sidebar > ul > li:focus i {
+  background: url(/src/assets/img/drop.png);
 }
 
 .content > .main > .right {
