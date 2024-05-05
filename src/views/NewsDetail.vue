@@ -5,12 +5,7 @@
         <strong>新闻中心</strong>
       </div>
     </div>
-    <div class="nav">
-      <div class="nav-location">
-        <i class="icon-location"><img src="../assets/img/icon-location.png" alt="" /></i>
-        <span>首页 - 新闻中心 - 行业动态</span>
-      </div>
-    </div>
+    <BreadCrumbs></BreadCrumbs>
 
     <section class="news_detail-content">
       <div class="news-title"></div>
@@ -80,7 +75,7 @@ a {
 
 .header {
   display: flex;
-  height: 370px;
+  height: 450px;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/img/news-center.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -96,32 +91,10 @@ a {
   margin: 0 auto;
 }
 
-.nav {
-  display: flex;
-  height: 68px;
-  background: #f5f8fa;
-  margin-bottom: 40.33px;
-}
-
-.news_detail-content,
-.nav-location {
+.news_detail-content {
   width: 1330px;
   margin: 0 auto;
-}
-
-.nav-location {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 22px;
-  align-self: center;
-  color: #555555;
-}
-
-.icon-location {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin-right: 10.83px;
+  margin-top: 40.33px;
 }
 
 .news-info {
