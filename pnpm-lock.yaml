@@ -14,9 +14,6 @@ dependencies:
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
-  primevue:
-    specifier: ^3.52.0
-    version: 3.52.0(vue@3.4.26)
   reset-css:
     specifier: ^5.0.2
     version: 5.0.2
@@ -26,6 +23,9 @@ dependencies:
   sass-loader:
     specifier: ^14.2.1
     version: 14.2.1(sass@1.75.0)
+  swiper:
+    specifier: ^11.1.1
+    version: 11.1.1
   vue:
     specifier: ^3.4.21
     version: 3.4.26(typescript@5.4.5)
@@ -3037,14 +3037,6 @@ packages:
     hasBin: true
     dev: true
 
-  /primevue@3.52.0(vue@3.4.26):
-    resolution: {integrity: sha512-HLOVP5YI0ArFKUhIyfZsWmTNMaBYNCBWC/3DYvdd/Po4LY5/WXf7yIYvArE2q/3OuwSXJXvjlR8UNQeJYRSQog==}
-    peerDependencies:
-      vue: ^3.0.0
-    dependencies:
-      vue: 3.4.26(typescript@5.4.5)
-    dev: false
-
   /proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
     dev: false
@@ -3312,6 +3304,11 @@ packages:
   /svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
     dev: true
+
+  /swiper@11.1.1:
+    resolution: {integrity: sha512-jGmEA/fNz1lACIcY4/40ggm1Gcyv+EUivmgV/Jd2WFPsEJhbWXnRAwzZR8OPjkBLtDxmzcoYG/iiAMWfRs0YKQ==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
 
   /synckit@0.8.8:
     resolution: {integrity: sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==}
