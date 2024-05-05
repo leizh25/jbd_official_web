@@ -13,7 +13,7 @@
       </div>
       <div class="localtion">
         <div>
-          <i>标</i>
+          <i> <img src="/src/assets/img/localtion.png" alt="" /></i>
           <span>首页 - 产品中心 -详情</span>
         </div>
       </div>
@@ -22,7 +22,7 @@
     <section class="content">
       <div class="product-box">
         <div class="product-img">
-          <img src="./images/test.jpg" alt="产品图片" />
+          <img src="/src/assets/img/JBD-AP20S003.png" alt="产品图片" />
         </div>
         <div class="product-detail">
           <span class="product-name">JBD-AP20S003</span>
@@ -72,15 +72,17 @@
         <div class="product-bottom">
           <div class="product-small-img">
             <ul>
-              <li><img src="./images/test.jpg" alt="一张图片" /></li>
+              <li><img src="/src/assets/img/JBD-AP20S003-small.png" alt="一张图片" /></li>
               <li>
-                <img src="./images/test.jpg" alt="一张图片" />
+                <img src="/src/assets/img/JBD-AP20S003-small.png" alt="一张图片" />
               </li>
-              <li><img src="./images/test.jpg" alt="一张图片" /></li>
+              <li><img src="/src/assets/img/JBD-AP20S003-small.png" alt="一张图片" /></li>
             </ul>
           </div>
           <div class="product-consult">
-            <span>我要咨询</span>
+            <span>
+              <a href="#consult">我要咨询</a>
+            </span>
           </div>
         </div>
       </div>
@@ -94,12 +96,14 @@
         </div>
       </nav>
       <div class="product-value">
-        <div class="value"></div>
+        <div class="value">
+          <img src="/src/assets/img/introduce.png" alt="产品介绍" />
+        </div>
       </div>
       <hr />
       <div class="message_container">
         <div class="w">
-          <div class="title">在线留言</div>
+          <div class="title" id="consult">我要咨询</div>
           <div class="form_wrapper">
             <form @submit.prevent="submitForm">
               <div class="form_grid">
@@ -134,7 +138,7 @@
                   <div class="tip">
                     <label>需求</label>
                   </div>
-                  <textarea type="textarea" required placeholder="请输入留言内容" rows="7" autocomplete="false" style="width: 820px"></textarea>
+                  <textarea type="textarea" required placeholder="简要描述您的需求" rows="7" autocomplete="false" style="width: 820px"></textarea>
                 </div>
               </div>
 
@@ -146,7 +150,7 @@
         </div>
       </div>
 
-      <hr style="margin-top: 60px" />
+      <hr />
 
       <div class="product-relation">
         <div class="title">
@@ -156,25 +160,25 @@
           <ul>
             <li>
               <div>
-                <img src="./images/relation.png" alt="产品图片" />
+                <img src="/src/assets/img/relation.png" alt="产品图片" />
               </div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
               <div>
-                <img src="./images/relation.png" alt="产品图片" style="height: 232px" />
+                <img src="/src/assets/img/relation.png" alt="产品图片" style="height: 232px" />
               </div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
               <div>
-                <img src="./images/relation.png" alt="产品图片" style="height: 232px" />
+                <img src="/src/assets/img/relation.png" alt="产品图片" style="height: 232px" />
               </div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
             <li>
               <div>
-                <img src="./images/relation.png" alt="产品图片" style="height: 232px" />
+                <img src="/src/assets/img/relation.png" alt="产品图片" style="height: 232px" />
               </div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
             </li>
@@ -278,14 +282,14 @@ input {
 }
 
 .desc {
-  left: 0px;
-  top: 0px;
-  width: 100%;
+  display: flex;
   height: 370px;
-  opacity: 0.2;
-  background-color: aqua;
-
+  width: 100%;
+  background: url(/src/assets/img/product-center.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
+  margin: 0 auto;
 }
 
 .desc > div:nth-child(1) {
@@ -342,12 +346,22 @@ input {
 
 .localtion > div {
   width: 1340px;
+  height: 68px;
   margin: 0 auto;
 }
 
 .localtion > div > i {
+  float: left;
+  display: inline-block;
   width: 22px;
+  opacity: 1;
+  height: 68px;
+  line-height: 76px;
+}
+.localtion > div > i > img {
+  width: 18.33px;
   height: 22px;
+  z-index: 999;
   opacity: 1;
 }
 
@@ -388,12 +402,14 @@ input {
   background: #fafafa;
   box-sizing: border-box;
   border: 1.4px solid #f1eded;
+  cursor: pointer;
 }
 
 .content > .product-box > .product-img > img {
   width: 365px;
   height: 389px;
   padding: 23px 86px 28px 71px;
+  cursor: pointer;
 }
 
 .content > .product-box > .product-detail {
@@ -480,6 +496,7 @@ input {
   float: left;
   height: 66px;
   width: 222px;
+  cursor: pointer;
 }
 
 .content > .product-box > .product-bottom > .product-small-img > ul {
@@ -494,6 +511,8 @@ input {
   opacity: 1;
   box-sizing: border-box;
   border: 1px solid #d6d6d6;
+  background: #fafafa;
+
   text-align: center;
   line-height: 66px;
 }
@@ -523,7 +542,7 @@ input {
   cursor: pointer;
 }
 
-.content > .product-box > .product-bottom > .product-consult > span {
+.content > .product-box > .product-bottom > .product-consult > span > a {
   width: 80px;
   height: 32.48px;
   opacity: 1;
@@ -585,7 +604,6 @@ input {
 
 .content > .product-value > .value {
   width: 1200px;
-  height: 1858.06px;
   opacity: 1;
   opacity: 1;
   background-color: #99cc00;
@@ -595,6 +613,7 @@ input {
 .content > hr {
   width: 1328px;
   border: 1px solid #e9e9e9;
+  margin-top: 60px;
 }
 
 .content > .my-want-consult {
@@ -629,7 +648,7 @@ input {
 
 .content > .message_container {
   // height: 750px;
-  @include h(750px);
+  @include h(660px);
   display: flex;
   justify-content: center;
 
@@ -766,6 +785,7 @@ input {
           font-weight: normal;
           color: #fff;
           text-align: center;
+          cursor: pointer;
         }
       }
     }
@@ -824,10 +844,12 @@ input {
   box-sizing: border-box;
   border: 1px solid #d6d6d6;
 }
+
 .product-relation > div:nth-child(2) > ul > li > div {
   width: 316px;
   height: 232px;
 }
+
 .product-relation > div:nth-child(2) > ul > li:not(:nth-child(1)) {
   margin-left: 20px;
 }
