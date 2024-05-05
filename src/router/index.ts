@@ -5,6 +5,7 @@ import InnovationView from '../views/InnovationView.vue';
 import ProductionView from '../views/ProductionView.vue';
 import ServiceView from '../views/ServiceView.vue';
 import NewsView from '../views/NewsView.vue';
+import NewsDetail from '../views/NewsDetail.vue';
 import ContactView from '../views/ContactView.vue';
 //@ts-ignore
 import NProgress from 'nprogress';
@@ -14,47 +15,74 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: '首页'
+      }
     },
     {
       path: '/about',
       name: 'about',
-      component: AboutView
+      component: AboutView,
+      meta: {
+        title: '关于我们'
+      }
     },
     {
       path: '/innovation',
       name: 'innovation',
-      component: InnovationView
+      component: InnovationView,
+      meta: {
+        title: ''
+      }
     },
     {
       path: '/production',
       name: 'production',
-      component: ProductionView
+      component: ProductionView,
+      meta: {
+        title: '产品中心'
+      }
     },
     {
       path: '/production/detail',
-      name: 'pdoDetail',
-      component: () => import('../views/ProductionDetail.vue')
+      name: 'proDetail',
+      component: () => import('../views/ProductionDetail.vue'),
+      meta: {
+        title: '产品中心 - 详情'
+      }
     },
     {
       path: '/service',
       name: 'service',
-      component: ServiceView
+      component: ServiceView,
+      meta: {
+        title: '服务支持'
+      }
     },
     {
       path: '/news',
       name: 'news',
-      component: NewsView
+      component: NewsView,
+      meta: {
+        title: '新闻中心'
+      }
     },
     {
       path: '/news/detail',
       name: 'newsDetail',
-      component: () => import('../views/NewsDetail.vue')
+      component: () => import('../views/NewsDetail.vue'),
+      meta: {
+        title: '新闻中心 - 详情'
+      }
     },
     {
       path: '/contact',
       name: 'contact',
-      component: ContactView
+      component: ContactView,
+      meta: {
+        title: '联系我们'
+      }
     }
   ]
 });
