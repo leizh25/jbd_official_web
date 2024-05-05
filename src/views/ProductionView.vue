@@ -29,53 +29,21 @@
 
       <div class="main">
         <nav class="sidebar">
-          <ul>
+          <ul v-for="(menu, index) in menus" :key="index" :data-height="menu.children.length ? menu.children.legth * 50 : 0">
             <span tabindex="1">
-              智能锂电池保护板
-              <i> <img src="/src/assets/img/up.png" alt="" /> </i>
+              {{ menu.name }}
+              <i @click="handleClick($event, menu.children)"><img src="/src/assets/img/up.png" alt="" /></i>
             </span>
-            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
-            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
-            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
-            <li tabindex="1"><a href="#">带通讯5串以下保护板</a></li>
-          </ul>
-          <ul>
-            <span>
-              智能锂电池保护板
-              <i><img src="/src/assets/img/up.png" alt="" /></i>
-            </span>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-          </ul>
-          <ul>
-            <span>
-              智能锂电池保护板
-              <i><img src="/src/assets/img/up.png" alt="" /></i>
-            </span>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-          </ul>
-          <ul>
-            <span>
-              智能锂电池保护板
-              <i><img src="/src/assets/img/up.png" alt="" /></i>
-            </span>
-            <li><a href="#">带通讯5串以下保护板</a></li>
-          </ul>
-          <ul>
-            <span>
-              智能锂电池保护板
-              <i><img src="/src/assets/img/up.png" alt="" /></i>
-            </span>
+            <div v-if="menu.children != null">
+              <li v-for="(child, childIndex) in menu.children" :key="childIndex" tabindex="1">
+                <a href="javascript:void(0)">{{ child.name }}</a>
+              </li>
+            </div>
           </ul>
         </nav>
+
         <section class="right">
           <ul>
-            <li>
-              <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
-              <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
-            </li>
             <li>
               <div><img src="/src/assets/img/test.jpg" alt="这是一张图片" width="232px" height="232px" /></div>
               <span>12V锂电池保护板3/4串三元铁锂户外电源大电流250A300A蓝牙</span>
@@ -121,10 +89,7 @@
   </main>
 </template>
 <script setup lang="ts">
-import axios from 'axios';
-
-const menus = ref([]);
-
+let menus = ref([]);
 onMounted(() => {
   // 初始化一个默认下拉菜单
   getMenus();
@@ -133,15 +98,19 @@ onMounted(() => {
 const lang = 0;
 async function getMenus() {
   console.log('加载菜单');
-  axios
-    .post('/product/center/type/1')
+  request
+    .get('/product/center/type/0')
     .then((response) => {
-      console.log(response.data);
+      menus.value = response.data;
+      console.log(menus.value);
     })
     .catch((error) => {
       console.log(error);
     });
 }
+const handleClick = (e: Event, arr) => {
+  console.log(e.target.parentElement.parentElement.parentElement, arr);
+};
 </script>
 <style scoped>
 body,
@@ -366,6 +335,10 @@ input {
   text-align: center;
 }
 
+.content > .main > .sidebar > ul:not(:nth-child(1)) {
+  margin-top: 20px;
+}
+
 .content > .main > .sidebar > ul > span {
   display: block;
   width: 300px;
@@ -422,14 +395,15 @@ input {
   margin-bottom: 9px;
 }
 
-.content > .main > .sidebar > ul > li:focus {
+.content > .main > .sidebar > ul > div > li:focus {
   background: #99cc00;
   color: #ffffff;
 }
 
-.content > .main > .sidebar > ul > li:focus a {
+.content > .main > .sidebar > ul > div > li:focus a {
   color: #ffffff;
 }
+
 .content > .main > .sidebar > ul > li:focus i {
   background: url(/src/assets/img/drop.png);
 }
