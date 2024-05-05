@@ -5,67 +5,81 @@
         <strong>新闻中心</strong>
       </div>
     </div>
-    <div class="nav">
-      <div class="nav-location">
-        <i class="icon-location"><img src="../assets/img/icon-location.png" alt="" /></i>
-        <span>首页 - 新闻中心 - 行业动态</span>
-      </div>
-    </div>
-
+    <BreadCrumbs></BreadCrumbs>
     <section class="news-content">
       <ul class="news-list">
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span>8 月 29 日，新乡天力锂能股份有限公司（以下简称 " 天力锂能 "）在创业板上市，保荐人为民生证券，本次发行价格为 57.00 元 / 股，发行市盈率 81.94 倍，截止发稿......</span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span>8 月 29 日，新乡天力锂能股份有限公司（以下简称 " 天力锂能 "）在创业板上市，保荐人为民生证券，本次发行价格为 57.00 元 / 股，发行市盈率 81.94 倍，截止发稿......</span>
+          </router-link>
+
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
+
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
           <i class="date">2018-08-29</i>
         </li>
         <li>
           <img src="" alt="" />
-          <router-link to="/news/detail">中元股份易主 借力驶入锂电池“赛道”</router-link>
-          <span></span>
+          <router-link to="/news/detail">
+            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
+            <span></span>
+          </router-link>
           <i class="date">2018-08-29</i>
         </li>
       </ul>
@@ -99,33 +113,10 @@
   margin: 0 auto;
 }
 
-.nav {
-  display: flex;
-  height: 68px;
-  background: #f5f8fa;
-  margin-bottom: 40.33px;
-}
-
-.nav-location {
-  width: 1330px;
-  margin: 0 auto;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 22px;
-  align-self: center;
-  color: #555555;
-}
-
-.icon-location {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  margin-right: 10.83px;
-}
-
 .news-content {
   width: 1330px;
   margin: 0 auto;
+  margin-top: 40.33px;
 }
 
 .news-list li {

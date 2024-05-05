@@ -1,5 +1,5 @@
 <template>
-  <div id="header" :class="{ poab: $route.path === '/' }">
+  <div id="header" :class="{ poab: colorFArr.includes($route.path) }">
     <ul class="w" :class="{ colorf: colorFArr.includes($route.path) }">
       <div class="logo"></div>
       <li :class="{ active: $route.path === '/' }" class="nav_item">
@@ -71,6 +71,7 @@ const colorFArr = ['/', '/production/detail', '/news/detail'];
   line-height: 80px;
   display: flex;
   justify-content: center;
+  transition: height 0.3s;
   &.poab {
     position: absolute;
   }
