@@ -11,12 +11,7 @@
           </div>
         </div>
       </div>
-      <div class="localtion">
-        <div>
-          <i> <img src="/src/assets/img/localtion.png" alt="" /></i>
-          <span>首页 - 产品中心 -详情</span>
-        </div>
-      </div>
+      <BreadCrumbs></BreadCrumbs>
     </section>
 
     <section class="content">
@@ -293,7 +288,7 @@ input {
 }
 
 .desc > div:nth-child(1) {
-  width: 1340px;
+  width: 1330px;
   height: 100%;
   line-height: 100%;
   margin: 0 auto;
@@ -335,54 +330,8 @@ input {
   margin-top: 27px;
 }
 
-.localtion {
-  left: 0px;
-  width: 100%;
-  height: 68px;
-  opacity: 1;
-  background: #f5f8fa;
-  line-height: 68px;
-}
-
-.localtion > div {
-  width: 1340px;
-  height: 68px;
-  margin: 0 auto;
-}
-
-.localtion > div > i {
-  float: left;
-  display: inline-block;
-  width: 22px;
-  opacity: 1;
-  height: 68px;
-  line-height: 76px;
-}
-.localtion > div > i > img {
-  width: 18.33px;
-  height: 22px;
-  z-index: 999;
-  opacity: 1;
-}
-
-.localtion > div > span {
-  margin-left: 10.83px;
-  width: 150px;
-  height: 22px;
-  width: 150px;
-  height: 22px;
-  opacity: 1;
-  font-family: 思源黑体;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 22px;
-  letter-spacing: 0px;
-  font-variation-settings: 'opsz' auto;
-  color: #555555;
-}
-
 .content {
-  width: 1340px;
+  width: 1330px;
   margin: 0 auto;
 }
 
@@ -834,7 +783,7 @@ input {
 }
 
 .product-relation > div:nth-child(2) > ul > li {
-  width: 318px;
+  width: 319px;
   height: 320px;
   border-radius: 6px;
   opacity: 1;

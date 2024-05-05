@@ -13,12 +13,7 @@
           </div>
         </div>
       </div>
-      <div class="localtion">
-        <div>
-          <i> <img src="/src/assets/img/localtion.png" alt="" /></i>
-          <span>首页 - 产品中心 -详情</span>
-        </div>
-      </div>
+      <BreadCrumbs></BreadCrumbs>
     </section>
 
     <section class="content">
@@ -125,7 +120,29 @@
     <router-link to="/production/detail">产品详情</router-link>
   </main>
 </template>
+<script setup lang="ts">
+import axios from 'axios';
 
+const menus = ref([]);
+
+onMounted(() => {
+  // 初始化一个默认下拉菜单
+  getMenus();
+});
+
+const lang = 0;
+async function getMenus() {
+  console.log('加载菜单');
+  axios
+    .post('/product/center/type/1')
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+</script>
 <style scoped>
 body,
 ol,
@@ -225,7 +242,7 @@ input {
 }
 
 .desc > div:nth-child(1) {
-  width: 1340px;
+  width: 1330px;
   height: 100%;
   line-height: 100%;
   margin: 0 auto;
@@ -267,55 +284,8 @@ input {
   margin-top: 27px;
 }
 
-.localtion {
-  left: 0px;
-  width: 100%;
-  height: 68px;
-  opacity: 1;
-  background: #f5f8fa;
-  line-height: 68px;
-}
-
-.localtion > div {
-  width: 1340px;
-  height: 68px;
-  margin: 0 auto;
-}
-
-.localtion > div > i {
-  float: left;
-  display: inline-block;
-  width: 22px;
-  opacity: 1;
-  height: 68px;
-  line-height: 76px;
-}
-.localtion > div > i > img {
-  width: 18.33px;
-  height: 22px;
-  z-index: 999;
-  opacity: 1;
-}
-
-.localtion > div > span {
-  margin-left: 9px;
-  width: 150px;
-  height: 22px;
-  width: 150px;
-  height: 22px;
-  opacity: 1;
-  font-family: 思源黑体;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 22px;
-  letter-spacing: 0px;
-  font-variation-settings: 'opsz' auto;
-  color: #555555;
-  margin-left: 9px;
-}
-
 .content {
-  width: 1340px;
+  width: 1330px;
   margin: 0 auto;
 }
 
@@ -478,7 +448,7 @@ input {
 
 .content > .main > .right > ul > li {
   display: block;
-  width: 320px;
+  width: 319px;
   height: 320px;
   text-align: center;
   border-radius: 6px;
@@ -521,7 +491,7 @@ input {
 }
 
 .loading-page {
-  width: 1340px;
+  width: 1330px;
   text-align: center;
   margin-bottom: 46px;
   margin-top: 41px;
