@@ -90,7 +90,10 @@
         </ul>
       </div>
       <div class="more">
-        <router-link to="/service/more">更多 ></router-link>
+        <p>
+          更多
+          <img src="../assets/img/arrow-right.png" alt="" />
+        </p>
       </div>
     </section>
 
@@ -179,9 +182,6 @@ a {
   width: 1330px;
   margin: 0 auto;
   margin-top: 40.33px;
-}
-
-.features {
 }
 
 .features li {
@@ -325,13 +325,20 @@ a {
   text-align: center;
 }
 
-.more a {
+.more {
   font-family: 思源黑体;
   font-size: 16px;
   font-weight: normal;
   line-height: 46px;
   letter-spacing: 0px;
   color: #666666;
+  cursor: pointer;
+}
+
+.more img {
+  width: 6.86px;
+  height: 12px;
+  margin-left: 5px;
 }
 
 .download {

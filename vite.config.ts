@@ -38,5 +38,15 @@ export default defineConfig({
         additionalData: '@import "@/style/globalVar.scss";'
       }
     }
+  },
+  server: {
+    // port: 5173,
+    proxy: {
+      '/api': {
+        target: "http://192.168.1.79:8097",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 });

@@ -9,7 +9,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     AboutView: typeof import('./src/views/AboutView.vue')['default']
     BreadCrumbs: typeof import('./src/components/BreadCrumbs.vue')['default']
-    Carousel: typeof import('primevue/carousel')['default']
     ContactView: typeof import('./src/views/ContactView.vue')['default']
     ContentTitle: typeof import('./src/components/ContentTitle.vue')['default']
     HistoryDot: typeof import('./src/components/HistoryDot.vue')['default']

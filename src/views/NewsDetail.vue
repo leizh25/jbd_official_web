@@ -47,7 +47,10 @@
       </div>
 
       <div class="return">
-        <router-link to="/news">返回列表</router-link>
+        <router-link to="/news"
+          >返回列表
+          <img src="../assets/img/arrow-right.png" alt="" />
+        </router-link>
       </div>
 
       <div class="page-location">
@@ -145,6 +148,12 @@ a {
   line-height: 46px;
   margin-top: 52px;
   color: #888;
+}
+
+.return a img {
+  width: 6.86px;
+  height: 12px;
+  margin-left: 5px;
 }
 
 .page-location {

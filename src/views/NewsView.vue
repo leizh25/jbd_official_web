@@ -8,93 +8,40 @@
     <BreadCrumbs></BreadCrumbs>
     <section class="news-content">
       <ul class="news-list">
-        <li>
-          <img src="" alt="" />
+        <li v-for="item in news" :key="item.id">
+          <img :src="item.img" alt="" />
           <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span>8 月 29 日，新乡天力锂能股份有限公司（以下简称 " 天力锂能 "）在创业板上市，保荐人为民生证券，本次发行价格为 57.00 元 / 股，发行市盈率 81.94 倍，截止发稿......</span>
+            <i class="news-title">{{ item.title }}</i>
+            <span>{{ item.summary }}</span>
           </router-link>
 
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-          <i class="date">2018-08-29</i>
-        </li>
-        <li>
-          <img src="" alt="" />
-          <router-link to="/news/detail">
-            <i class="news-title">中元股份易主 借力驶入锂电池“赛道”</i>
-            <span></span>
-          </router-link>
-          <i class="date">2018-08-29</i>
+          <i class="date">{{ item.lastUpdateTime.split(' ')[0] }}</i>
         </li>
       </ul>
       <div class="return">
-        <router-link to="/">返回列表</router-link>
+        <router-link to="/"
+          >返回列表
+          <img src="../assets/img/arrow-right.png" alt="" />
+        </router-link>
       </div>
     </section>
   </div>
 </template>
-<script setup lang="ts"></script>
-<style scoped>
-.news-view {
-  position: relative;
-}
+<script setup lang="ts">
+let news = ref<any>([]);
 
+onMounted(() => {
+  console.log('mounted');
+  getData();
+});
+const getData = () => {
+  request.get('/news/center/0').then((res) => {
+    news.value = res.data;
+    console.log(news);
+  });
+};
+</script>
+<style scoped>
 .header {
   display: flex;
   height: 370px;
@@ -188,5 +135,11 @@
   line-height: 46px;
   margin-top: 52px;
   color: #888;
+}
+
+.return a img {
+  width: 6.86px;
+  height: 12px;
+  margin-left: 5px;
 }
 </style>
